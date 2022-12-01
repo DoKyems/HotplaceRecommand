@@ -4,7 +4,7 @@ Kospeech
 
 <hr>
 
-한국어 자동 음성 인식 기능
+ 한국어 자동 음성 인식 기능
 
 오픈 소스 소프트웨어인 KoSpeech 는 딥 러닝 라이브러리인 PyTorch를 기반으로 하는 모듈식 확장형 한국어 자동 음성 인식(ASR) 툴킷입니다. 여러 자동 음성 인식 오픈 소스 툴킷이 출시되었지만 모두 영어와 같은 비한국어를 처리합니다(예: ESPnet, Espresso). 
 AI Hub는 KsponSpeech로 알려진 한국어 음성 코퍼스 1,000시간을 공개했지만 모델 성능을 비교할 수 있는 전처리 방법과 기준 모델이 확립되어 있지 않습니다. 따라서 KsponSpeech 말뭉치에 대한 전처리 방법과 여러 모델(Deep Speech 2, LAS, Transformer, Jasper, Conformer)을 제안합니다.
