@@ -44,11 +44,6 @@ Scrapy 프로젝트는 "spiders"를 중심으로 개발되었습니다. "spiders
 - 다운로드 타임아웃, request 사이의 random한 텀 두기 등 다양한 옵션
 - scrapy를 사용하기 위해서는 scrapy 기반 프로젝트를 생성
 - **spider를 작성**해 크롤링
-
-
-
-### Scrapy 단점
-
 - javascript지원 힘들다.
 - ajax/pjax로 데이터가 갱신되는 웹페이지라면 원하는 데이터를 추출하는 게 어렵다.
 
