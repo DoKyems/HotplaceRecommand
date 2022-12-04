@@ -47,6 +47,7 @@ CTC(Connectionist Temporal Classification)는 신호와 텍스트 사이의 alig
 - kospeech가 제공하는 다양한 Acoustic Model 중, ds2(deepspeech2)를 사용했습니다.<br>
 - Pytorch의 경우 1.10 버전이 사용되기 때문에 상위 버전을 사용하시는 경우 별도로 Pytorch를 재설치해주어야 합니다.<br>
 - 전처리, 학습, 예측, 예측한 결과 저장에 필요한 모든 모듈을 포함시켰습니다.<br><br><br><br>
+
 전처리(Preprocess)
 ------------
 ```!python ./dataset/kspon/main.py --dataset_path $dataset_path --vocab_dest $vacab_dict_destination ---- -- output_unit 'character' --preprocess_mode 'phonetic' ```
@@ -54,11 +55,13 @@ CTC(Connectionist Temporal Classification)는 신호와 텍스트 사이의 alig
 - output_unit과 preprocess_mode는 상황에 맞게 지정해주시면 됩니다.<br>
 - ./dataset/kspon/preprocess/preprocess.py의 line 95~101을 확인해보시면, './'의 위치에 'train.txt' 파일을 필요로 합니다. 해당 파일은 '음성 파일 경로' + '\t' + '한국어 전사' 의 형식으로 작성되어야 합니다.<br>
 train.txt를 만들 때 사용한 코드는 ./etc/traintext 생성.ipynb 에 올려져 있습니다.<br><br><br><br>
+
 학습(Train)
 -------------------
 ```!python ./bin/main.py model=ds2 train=ds2_train train.dataset_path=$dataset_path```
 <br>
 - 학습과 관련된 configs(epoch, batch_size, spec_augment, 음성 파일 확장자 등)의 수정은 ./configs/audio/fbank.yaml 혹은 ./configs/train/ds2_train.yaml 에서 하실 수 있습니다.<br><br><br><br>
+
 kospeech 라이선스
 --------------
 - Apache License 2.0<br>
@@ -70,10 +73,13 @@ References <br>
 Wer, Cer 관련: https://holianh.github.io/portfolio/Cach-tinh-WER/ <br>
 kospeech: https://github.com/sooftware/kospeech
 <br><br><br><br><br><br><br><br><br>
+
 elasticsearch
 ==========
+
 엘라스틱 서치는 검색 엔진입니다. 여기서 검색 엔진(search engine)이란, 웹에서 정보를 수집하여 검색 결과를 제공하는 프로그램입니다. <br>
 <hr>
+
 Elasticsearch는 Elastic Stack 의 핵심인 분산형 RESTful 검색 및 분석 엔진입니다. <br>
 Elasticsearch를 사용하여 다음에 대한 데이터를 저장, 검색 및 관리할 수 있습니다. <br>
 - 로그
@@ -85,24 +91,35 @@ Elasticsearch를 사용하여 다음에 대한 데이터를 저장, 검색 및 �
 Elasticsearch를 설정하는 가장 간단한 방법은 Elastic Cloud에서 Elasticsearch Service 로 관리형 배포를 생성하는 것 입니다.<br>
 Elasticsearch를 직접 설치하고 관리하려면 https://www.elastic.co/kr/downloads/elasticsearch 에서 최신 버전을 다운로드할 수 있습니다.<br>
 <br><br><br>
+
 데이터 추가
 --------------
+
 REST API를 통해 JSON 개체(문서)를 전송하여 데이터를 Elasticsearch로 인덱싱합니다. <br>
 구조화된 텍스트, 구조화되지 않은 텍스트, 숫자 데이터 또는 지리 공간 데이터가 있든 관계없이 Elasticsearch는 빠른 검색을 지원하는 방식으로 이를 효율적으로 저장하고 인덱싱합니다.
 <br><br>
+
 오픈소스 검색엔진
 --------
+
 엘라스틱 서치는 아파치 재단의 루씬을 기반으로 개발된 오픈소스 검색엔진입니다.<br><br>
+
 전문 검색
 ----------
+
 전문 검색이란, 내용 전체를 색인해서 특정 단어가 포함된 문서를 검색하는 것이다. 엘라스틱서치는 이러한 전문 검색이 가능합니다.<br><br>
+
 통계분석
 ----------
 비정형 로그 데이터를 수집하고 한곳에 모아 통계 분석을 할 수 있습니다.<br><br>
+
 역색인
 ------------
+
 역색인 구조를 통해 특정 단어를 찾을 때 문서 전체에서 찾는 것이 아니라 단어가 포함된 특정 문서의 위치를 알아내어 빠르게 결과를 찾아낼 수 있습니다.<br><br>
+
 라이선스
 ------------
+
 - Elastic License 2.0 <br>
 Elastic 2.0는 오픈소스 라이선스의 거의 모든 자유를 허용하며 소프트웨어 수신자는 소프트웨어를 자유롭게 사용, 변경 및 재배포 할 수 있습니다.
