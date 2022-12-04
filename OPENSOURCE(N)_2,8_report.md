@@ -21,7 +21,7 @@
 
 ![DFD](https://user-images.githubusercontent.com/85345952/205487119-bb137b78-b6e0-4214-91ec-66c3888fcddc.png)
 
-<br>
+
 Kospeech
 =============
 종단 간 음성 인식 모델을 개발하기 위해 PyTorch에 구축된 Apache 2.0 ASR 연구 라이브러리
